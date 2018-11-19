@@ -6,23 +6,21 @@ import christmas.services.UserRequestBody;
 import christmas.services.UserService;
 import christmas.utils.JsonUtil;
 import com.mongodb.DBObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import spark.Request;
 import spark.Response;
 import spark.Route;
 
-import javax.naming.NoPermissionException;
+import org.apache.log4j.Logger;
+import org.apache.log4j.LogManager;
+
 import java.net.UnknownHostException;
 import java.util.Base64;
-import java.util.Stack;
 
 import static christmas.utils.JsonUtil.json;
 import static spark.Spark.*;
 
 public class UserController {
-
-    final private static Logger logger = LoggerFactory.getLogger(UserController.class);
+    final private static Logger logger = LogManager.getLogger(UserController.class.getName());
 
     public UserController(final UserService userService) {
 
@@ -44,6 +42,7 @@ public class UserController {
                         return userService.sendSecretSantaName(userService.getUser(user1.getSecretSanta()));
                     }
                     response.status(400);
+                    logger.error(new ResponseError("No user with id '%s' found", request.params(":id")));
                     throw new ResponseError("No user with id '%s' found", request.params(":id"));
 
                 } catch(ResponseError e) {
@@ -52,6 +51,7 @@ public class UserController {
                     throw e;
                 } catch(UnknownHostException e) {
                     response.status(500);
+                    logger.error(e.getMessage());
                     throw e;
                 }
             }

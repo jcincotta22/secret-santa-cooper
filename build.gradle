@@ -53,6 +53,10 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.5'
     compile 'org.mongodb:mongo-java-driver:2.12.3'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.9.4'
+    compile group: 'log4j', name: 'log4j', version: '1.2.16'
+//    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.5'
+//    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.5'
+
 }
 
 node {

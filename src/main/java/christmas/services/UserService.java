@@ -6,15 +6,16 @@ import christmas.models.User;
 import christmas.utils.JsonUtil;
 import christmas.utils.ListUtils;
 import com.mongodb.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
+import org.apache.log4j.LogManager;
 
 import java.io.IOException;
 import java.net.UnknownHostException;
 import java.util.*;
 
 public class UserService {
-    final private static Logger logger = LoggerFactory.getLogger(UserService.class);
+    final private static Logger logger = LogManager.getLogger(UserService.class.getName());
+
     private static List<User> cachedUserList;
 
     public UserService() throws UnknownHostException {
@@ -24,7 +25,7 @@ public class UserService {
     private static void updateCounter(int postSequence, DBCollection counter, BasicDBObject collectionToUpdate) {
         BasicDBObject updated = collectionToUpdate.append("sequence_value", postSequence);
         BasicDBObject originalCollection = ConnectToDB.findOne("_id", "users", counter);
-        logger.debug("Counter updated to {}", postSequence);
+        logger.debug("Counter updated to " + postSequence);
         counter.update(originalCollection, updated);
     }
 
@@ -33,7 +34,7 @@ public class UserService {
         DB database = mongoClient.getDB("secret_santa");
         DBCollection collection = database.getCollection("Users");
         DBObject query = new BasicDBObject("_id", id);
-        logger.debug("Successfully retrieved user with id {}", id);
+        logger.debug("Successfully retrieved user with id " + id);
 
         return collection.find(query).one();
     }
@@ -43,7 +44,7 @@ public class UserService {
         DB database = mongoClient.getDB("secret_santa");
         DBCollection collection = database.getCollection("Users");
         DBObject query = new BasicDBObject("_id", id);
-        logger.debug("Successfully retrieved user with id {}", id);
+        logger.debug("Successfully retrieved user with id " + id);
         DBObject dbUser = collection.find(query).one();
         User user = JsonUtil.jsonToObject(JsonUtil.toJson(dbUser), User.class);
         if(!credentials.equals(user.getUsername() + ":" + user.getPassword())) {
@@ -62,7 +63,7 @@ public class UserService {
         DBObject newUser = ConnectToDB.toDBObject(user);
         userCollection.insert(newUser);
 
-        logger.debug("User created with name, {}, and email, {}", user.getName(), user.getEmail());
+        logger.debug("User created with name, {}, and email, {}");
         updateCounter(id + 1, counter, userSequence);
 
         return newUser;
@@ -174,7 +175,7 @@ public class UserService {
     private static void updateUserSecretSanta(User user, DBCollection userCollection, BasicDBObject collectionToUpdate, String field) {
         BasicDBObject updated = collectionToUpdate.append(field, user.getSecretSanta());
         BasicDBObject originalCollection = ConnectToDB.findOne("_id", user.getId(), userCollection);
-        logger.debug("Secret Santa updated to {}", user.getSecretSanta());
+        logger.debug("Secret Santa updated to " + user.getSecretSanta());
         userCollection.update(originalCollection, updated);
     }
 
