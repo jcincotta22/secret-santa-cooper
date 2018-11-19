@@ -75,6 +75,8 @@ public class UserService {
         for(User user : getAllUsers()) {
             userResourceList.add(UserResource.from(user));
         }
+        logger.debug("Successfully Retrieved all users");
+
         return userResourceList;
     }
 
@@ -101,6 +103,7 @@ public class UserService {
     private void updateAllCachedUsers(User user) throws UnknownHostException {
         if(cachedUserList.size() == 1 && cachedUserList.get(0).getId() == user.getId()) {
             resetCache();
+            logger.debug("Updating cached users");
             updateAllCachedUsers(cachedUserList.get(0));
         } else if(cachedUserList.size() != 0) {
             ListUtils listUtils = new ListUtils();
@@ -109,6 +112,7 @@ public class UserService {
 
             if(noAvailableIds(cachedUserList, parentIdsPlusOwnId)) {
                 resetCache();
+                logger.debug("Updating cached users");
                 updateAllCachedUsers(cachedUserList.get(0));
             } else {
                 int id = listUtils.randomIndexNoRepeat(cachedUserList, parentIdsPlusOwnId);
@@ -123,8 +127,10 @@ public class UserService {
             Map<String, List<Integer>> allIds = getAllSecretSantaIds();
             if(checkForDups(allIds.get("ssIds"))) {
                 resetCache();
+                logger.debug("Updating cached users");
                 updateAllCachedUsers(cachedUserList.get(0));
             } else {
+                logger.debug("Updating cached users, Successfully set secret santas");
                 resetCache();
             }
         }

@@ -1,2 +1,331 @@
 2018-11-19 14:38:07 ERROR UserController:50 - You do not have permissions
 2018-11-19 14:38:07 ERROR Bootstrap:34 - You do not have permissions
+2018-11-19 14:50:12 DEBUG UserService:78 - Successfully Retrieved all users
+2018-11-19 14:50:12 DEBUG Bootstrap:22 - spark.Response@4f2d8c0a
+2018-11-19 14:50:31 DEBUG UserService:78 - Successfully Retrieved all users
+2018-11-19 14:50:31 DEBUG Bootstrap:22 - spark.Response@2779fd91
+2018-11-19 14:50:53 DEBUG Bootstrap:22 - spark.Response@17feee5
+2018-11-19 14:50:59 DEBUG Bootstrap:22 - spark.Response@58f9560e
+2018-11-19 14:51:08 DEBUG Bootstrap:22 - spark.Response@2eaae5ce
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 14
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 14
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 5
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 5
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 16
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 16
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 3
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 3
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 4
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 4
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 20
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 20
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 17
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 17
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 21
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 21
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 19
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 19
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 18
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 18
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 1
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 1
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 15
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 15
+2018-11-19 14:51:17 DEBUG UserService:115 - Updating cached users
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 20
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 20
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 17
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 17
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 14
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 14
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 18
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 18
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 16
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 16
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 1
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 1
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 15
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 15
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 21
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 21
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 5
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 5
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 4
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 4
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 2
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 2
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 3
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 3
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 19
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 19
+2018-11-19 14:51:17 DEBUG UserService:130 - Updating cached users
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 20
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 20
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 21
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 21
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 2
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 2
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 17
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 17
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 4
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 4
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 15
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 15
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 14
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 14
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 19
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 19
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 18
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 18
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 5
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 5
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 16
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 16
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 3
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 3
+2018-11-19 14:51:17 DEBUG UserService:115 - Updating cached users
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 18
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 18
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 16
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 16
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 21
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 21
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 4
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 4
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 20
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 20
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 17
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 17
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 15
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 15
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 19
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 19
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 14
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 14
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 2
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 2
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 5
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 5
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 3
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 3
+2018-11-19 14:51:17 DEBUG UserService:115 - Updating cached users
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 17
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 17
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 20
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 20
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 2
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 2
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 15
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 15
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 18
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 18
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 4
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 4
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 19
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 19
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 21
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 21
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 1
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 1
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 14
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 14
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 16
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 16
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 3
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 3
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 5
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 5
+2018-11-19 14:51:17 DEBUG UserService:130 - Updating cached users
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 16
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 16
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 20
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 20
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 2
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 2
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 15
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 15
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 21
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 21
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 17
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 17
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 19
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 19
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 1
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 1
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 14
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 14
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 4
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 4
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 3
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 3
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 18
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 18
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 5
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 5
+2018-11-19 14:51:17 DEBUG UserService:130 - Updating cached users
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 4
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 4
+2018-11-19 14:51:17 DEBUG UserService:184 - Secret Santa updated to 20
+2018-11-19 14:51:17 DEBUG UserService:37 - Successfully retrieved user with id 20
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 17
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 17
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 5
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 5
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 14
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 14
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 2
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 2
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 18
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 18
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 16
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 16
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 1
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 1
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 15
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 15
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 3
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 3
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 21
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 21
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 19
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 19
+2018-11-19 14:51:18 DEBUG UserService:130 - Updating cached users
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 18
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 18
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 19
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 19
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 21
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 21
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 15
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 15
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 14
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 14
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 5
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 5
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 4
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 4
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 3
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 3
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 16
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 16
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 17
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 17
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 20
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 20
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 1
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 1
+2018-11-19 14:51:18 DEBUG UserService:115 - Updating cached users
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 14
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 14
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 3
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 3
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 18
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 18
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 19
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 19
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 2
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 2
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 15
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 15
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 4
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 4
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 20
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 20
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 5
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 5
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 17
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 17
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 21
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 21
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 1
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 1
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 16
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 16
+2018-11-19 14:51:18 DEBUG UserService:130 - Updating cached users
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 14
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 14
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 15
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 15
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 3
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 3
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 2
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 2
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 19
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 19
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 1
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 1
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 16
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 16
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 20
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 20
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 21
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 21
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 5
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 5
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 4
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 4
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 18
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 18
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 17
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 17
+2018-11-19 14:51:18 DEBUG UserService:130 - Updating cached users
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 17
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 17
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 15
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 15
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 20
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 20
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 18
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 18
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 3
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 3
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 21
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 21
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 4
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 4
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 1
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 1
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 16
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 16
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 5
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 5
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 14
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 14
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 2
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 2
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 19
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 19
+2018-11-19 14:51:18 DEBUG UserService:130 - Updating cached users
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 19
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 19
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 15
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 15
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 21
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 21
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 4
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 4
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 20
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 20
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 16
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 16
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 3
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 3
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 18
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 18
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 14
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 14
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 2
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 2
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 17
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 17
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 5
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 5
+2018-11-19 14:51:18 DEBUG UserService:184 - Secret Santa updated to 1
+2018-11-19 14:51:18 DEBUG UserService:37 - Successfully retrieved user with id 1
+2018-11-19 14:51:18 DEBUG UserService:133 - Updating cached users, Successfully set secret santas
+2018-11-19 14:51:18 DEBUG Bootstrap:22 - spark.Response@3191aff6
+2018-11-19 14:52:04 DEBUG UserService:78 - Successfully Retrieved all users
+2018-11-19 14:52:04 DEBUG Bootstrap:22 - [{"_id":1,"name":"jeff","parentIds":[3,2]},{"_id":2,"name":"jeff","parentIds":[1]},{"_id":3,"name":"jeff","parentIds":[1]},{"_id":4,"name":"Ellen","parentIds":[5]},{"_id":5,"name":"Janie","parentIds":[2]},{"_id":14,"name":"joe","parentIds":[]},{"_id":15,"name":"joel","parentIds":[5,2]},{"_id":16,"name":"joel","parentIds":[2]},{"_id":17,"name":"kathy","parentIds":[3]},{"_id":18,"name":"kathy","parentIds":[]},{"_id":19,"name":"kathy","parentIds":[3]},{"_id":20,"name":"kathy1","parentIds":[3]},{"_id":21,"name":"kathy1","parentIds":[3]}]
+2018-11-19 14:53:36 DEBUG UserService:78 - Successfully Retrieved all users
+2018-11-19 14:53:36 DEBUG Bootstrap:22 - 200
+2018-11-19 14:53:36 DEBUG Bootstrap:24 - {}

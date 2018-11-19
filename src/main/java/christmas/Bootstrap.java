@@ -19,7 +19,6 @@ public class Bootstrap {
         new UserController(new UserService());
 
         after((req, res) -> {
-            logger.debug(res);
             res.type("application/json");
         });
 
