@@ -1,3 +1,6 @@
+import jp.classmethod.aws.gradle.ec2.AmazonEC2StartInstanceTask;
+import jp.classmethod.aws.gradle.ec2.AmazonEC2StopInstanceTask;
+
 apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'war'
@@ -9,7 +12,8 @@ targetCompatibility = 1.8
 buildscript {
     repositories {
         mavenCentral()
-        maven { url "https://plugins.gradle.org/m2/" }
+        maven {
+            url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
         classpath "jp.classmethod.aws:gradle-aws-plugin:0.30"
@@ -17,29 +21,18 @@ buildscript {
     }
 }
 
-apply plugin: 'jp.classmethod.aws'
 apply plugin: 'com.moowork.node'
 
-aws {
-    profileName = 'default'
-    region = 'us-west-2b'
-}
 
-apply plugin: 'jp.classmethod.aws.ec2'
 
 // You can overwrite default credentials and region settings like this:
 // ec2 {
-//   profileName 'another-credentials-profile-name' // optional
-//   region = 'us-east-1'
+//   profileName = 'default' // optional
+//   region = 'us-west-2b'
 // }
 
-task stopBastion(type: jp.classmethod.aws.gradle.ec2.AmazonEC2StopInstanceTask) {
-    instanceIds += 'i-0cba70c3c6a3ed897'
-}
 
-task startBastion(type: jp.classmethod.aws.gradle.ec2.AmazonEC2StartInstanceTask) {
-    instanceIds += 'i-0cba70c3c6a3ed897'
-}
+
 
 repositories {
     mavenCentral()
@@ -54,9 +47,36 @@ dependencies {
     compile 'org.mongodb:mongo-java-driver:2.12.3'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.9.4'
     compile group: 'log4j', name: 'log4j', version: '1.2.16'
+    compile 'com.amazonaws:aws-java-sdk-iam:1.11.78'
+    compile 'com.amazonaws:aws-java-sdk-ec2:1.11.78'
+
 //    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.5'
 //    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.5'
 
+}
+
+apply plugin: 'jp.classmethod.aws'
+apply plugin: 'jp.classmethod.aws.ec2'
+
+
+aws {
+    profileName = 'default'
+    region = 'us-west-2'
+}
+
+
+
+task stopInstance(type: AmazonEC2StopInstanceTask) {
+    instanceIds += 'i-0cba70c3c6a3ed897'
+}
+
+
+task stopBastion(type: AmazonEC2StopInstanceTask) {
+    instanceIds += 'i-0cba70c3c6a3ed897'
+}
+
+task startInstance(type: AmazonEC2StartInstanceTask) {
+    instanceIds += 'i-0cba70c3c6a3ed897'
 }
 
 node {
@@ -68,7 +88,7 @@ node {
 
 jar {
     baseName = 'secret-santa-gradle'
-    version =  '0.1.1'
+    version =  '2.1.0'
     manifest {
         attributes("secret-santa": "secret-santa",
                 "Implementation-Version": "1.0.0",

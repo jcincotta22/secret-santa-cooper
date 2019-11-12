@@ -2,7 +2,7 @@ import React from 'react';
 import ReactModal from 'react-modal';
 import Button from './Button';
 import Input from './Input';
-import { login, getAllUsers } from '../http';
+import { login, getAllUsers } from '../http/http';
 import User from './User';
 import './styles.css';
 import SecretSanta from './SecretSanta';
@@ -21,8 +21,6 @@ export default class UserLogin extends React.Component {
       allUsers: [],
     }
   }
-
-  // load users and ids on mount
 
   componentDidMount() {
     getAllUsers().then(({ data }) => {
@@ -69,7 +67,6 @@ export default class UserLogin extends React.Component {
 
 
   render() {
-
     const { isOpen, username, password, secretSanta, invalidLogin, allUsers } = this.state;
     const modalStyle = {
       content: {
@@ -82,7 +79,7 @@ export default class UserLogin extends React.Component {
     }
     return(
       <div className='user-container'>
-        {!secretSanta && allUsers ? allUsers.map(user => <User openModal={this.openModal} userId={user._id} name={user.name} />) : null}
+        {!secretSanta && allUsers ? allUsers.map(user => <User key={user._idx} openModal={this.openModal} userId={user._id} name={user.name} />) : null}
         {secretSanta ? <SecretSanta text={secretSanta} userName={this.state.currentUser} />
         : 
         <ReactModal

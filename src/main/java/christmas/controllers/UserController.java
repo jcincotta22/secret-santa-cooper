@@ -27,6 +27,7 @@ public class UserController {
         get("api/users/:id", new Route() {
             @Override
             public Object handle(Request request, Response response) throws ResponseError, UnknownHostException {
+                logger.debug("Authorizing user");
                 // process request
                 String auth = request.headers("Authorization");
                 String b64Credentials = auth.substring("Basic".length()).trim();
@@ -38,6 +39,7 @@ public class UserController {
                     );
 
                     if(user != null) {
+                        logger.debug("found user, sending secret santa");
                         User user1 = JsonUtil.jsonToObject(JsonUtil.toJson(user), User.class);
                         return userService.sendSecretSantaName(userService.getUser(user1.getSecretSanta()));
                     }
@@ -64,6 +66,7 @@ public class UserController {
         post("/user", (req, res) -> {
             String body = req.body();
             UserRequestBody userRequestBody = JsonUtil.jsonToObject(body, UserRequestBody.class);
+            logger.debug("create user with name " + userRequestBody.getName());
             return userService.createUser(
                     userRequestBody.getName(),
                     userRequestBody.getEmail(),
@@ -74,6 +77,7 @@ public class UserController {
         }, json());
 
         post("/selection", (req, res) -> {
+            logger.debug("starting secret santa selection");
             userService.setSecretSanta();
             return "Selection Made";
         });

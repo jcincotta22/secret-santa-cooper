@@ -1,6 +1,7 @@
 {
   "name": "secret-santa-frontend",
   "version": "0.1.0",
+  "homepage": "/",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
@@ -15,7 +16,6 @@
     "react-modal": "^3.6.1",
     "react-scripts": "2.1.1"
   },
-  "proxy": "http://localhost:8080/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

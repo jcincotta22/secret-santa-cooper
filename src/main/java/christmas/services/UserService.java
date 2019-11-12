@@ -34,8 +34,6 @@ public class UserService {
         DB database = mongoClient.getDB("secret_santa");
         DBCollection collection = database.getCollection("Users");
         DBObject query = new BasicDBObject("_id", id);
-        logger.debug("Successfully retrieved user with id " + id);
-
         return collection.find(query).one();
     }
 
@@ -89,12 +87,12 @@ public class UserService {
             secretSantaIds.add(user.getSecretSanta());
             userIds.add(user.getId());
         }
-
+        logger.debug("Sorting all ids");
         Collections.sort(userIds);
         Collections.sort(secretSantaIds);
         userIdMap.put("userIds", userIds);
         userIdMap.put("ssIds", secretSantaIds);
-
+        logger.debug("Successfully Sorted ids");
         return userIdMap;
     }
 

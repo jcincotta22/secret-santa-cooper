@@ -1,19 +1,42 @@
-.classpath
-.gradle/
-.project
-.settings/
-.idea/
-bin/
-build/
+# See https://help.github.com/ignore-files/ for more about ignoring files.
 
-# Ignore Gradle GUI config
-gradle-app.setting
 
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
+**/.settings
 
-# Cache of project
-.gradletasknamecache
+# GRADLE IGNORES
+**/.gradle
+gradle/*
+**/build
+**/.idea
+**/*.iml
+gradlew
+gradlew.bat
+gradle/wrapper/
 
-# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
-# gradle/wrapper/gradle-wrapper.properties
+**/*.iws
+**/*.log
+**/*.log.*
+**/deploy/
+**/out
+
+/log
+
+**/bin
+**/.settings
+**/.classpath
+.vscode
+**/.project
+
+# dependencies
+/webapp/node_modules
+
+# testing
+/webapp/coverage
+
+# production
+/server/resources/public/*
+/webapp/log
+/webapp/dist
+
+dist
+.DS_Store

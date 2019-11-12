@@ -16,10 +16,35 @@ public class Bootstrap {
 
     public static void main(String[] args) throws UnknownHostException {
         port(8080);
+
+        options("/*",
+                (request, response) -> {
+
+                    String accessControlRequestHeaders = request
+                            .headers("Access-Control-Request-Headers");
+                    if (accessControlRequestHeaders != null) {
+                        response.header("Access-Control-Allow-Headers",
+                                accessControlRequestHeaders);
+                    }
+
+                    String accessControlRequestMethod = request
+                            .headers("Access-Control-Request-Method");
+                    if (accessControlRequestMethod != null) {
+                        response.header("Access-Control-Allow-Methods",
+                                accessControlRequestMethod);
+                    }
+
+                    return "OK";
+                });
+
+        before((request, response) -> response.header("Access-Control-Allow-Origin", "*"));
+
         new UserController(new UserService());
 
         after((req, res) -> {
             res.type("application/json");
+            logger.debug(req.headers());
+            logger.debug(res.status());
         });
 
         exception(IllegalArgumentException.class, (e, req, res) -> {
@@ -36,5 +61,5 @@ public class Bootstrap {
 
         get("/", (req, res) -> "Hello World");
 
-  }
+    }
 }
