@@ -20,7 +20,9 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-modal": "^3.6.1",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "set-value": "^3.0.1",
+    "webpack-dev-server": "3.1.9"
   },
   "scripts": {
     "start": "react-scripts start",
