@@ -1,13 +1,17 @@
-import jp.classmethod.aws.gradle.ec2.AmazonEC2StartInstanceTask;
-import jp.classmethod.aws.gradle.ec2.AmazonEC2StopInstanceTask;
+import jp.classmethod.aws.gradle.ec2.AmazonEC2StartInstanceTask
+import jp.classmethod.aws.gradle.ec2.AmazonEC2StopInstanceTask
 
 apply plugin: 'java'
 apply plugin: 'application'
-apply plugin: 'war'
 
 mainClassName = 'christmas.Bootstrap'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+version = '1.0.0'
+
+def sparkJavaVersion = '2.9.1'
+def jacksonVersion = '2.9.9'
+def mongoVersion = '3.10.2'
 
 buildscript {
     repositories {
@@ -21,37 +25,24 @@ buildscript {
     }
 }
 
-apply plugin: 'com.moowork.node'
-
-
-
-// You can overwrite default credentials and region settings like this:
-// ec2 {
-//   profileName = 'default' // optional
-//   region = 'us-west-2b'
-// }
-
-
-
-
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    compile "com.sparkjava:spark-core:2.7.2"
+    compile "com.sparkjava:spark-core:${sparkJavaVersion}"
     compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.7'
     testCompile "junit:junit:4.12"
+    compile 'org.reflections:reflections:0.9.11'
+    compile group: 'log4j', name: 'log4j', version: '1.2.16'
     compile "org.slf4j:slf4j-simple:1.7.7"
     compile 'com.google.code.gson:gson:2.8.5'
-    compile 'org.mongodb:mongo-java-driver:2.12.3'
+    compile 'com.google.code.gson:gson:2.8.5'
+    compile "org.mongodb:mongo-java-driver:${mongoVersion}"
     compile 'com.fasterxml.jackson.core:jackson-databind:2.9.4'
-    compile group: 'log4j', name: 'log4j', version: '1.2.16'
     compile 'com.amazonaws:aws-java-sdk-iam:1.11.78'
     compile 'com.amazonaws:aws-java-sdk-ec2:1.11.78'
-
-//    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.5'
-//    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.5'
+    compile "com.fasterxml.jackson.jr:jackson-jr-all:$jacksonVersion"
 
 }
 
@@ -79,19 +70,11 @@ task startInstance(type: AmazonEC2StartInstanceTask) {
     instanceIds += 'i-0cba70c3c6a3ed897'
 }
 
-node {
-    version = '10.9.0'
-    npmVersion = '6.2.0'
-    download = true
-    // distBaseUrl = Custom artifactory location here for node/npm.
-}
-
 jar {
-    baseName = 'secret-santa-gradle'
-    version =  '2.1.0'
+    baseName = 'secret-santa'
     manifest {
-        attributes("secret-santa": "secret-santa",
-                "Implementation-Version": "1.0.0",
+        attributes("secret-santa": baseName,
+                "Implementation-Version": version,
                 "Main-Class": "christmas.Bootstrap"
         )
     }
@@ -104,20 +87,4 @@ jar {
         configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
     }
 }
-
-
-node {
-    version = '6.10.2'
-    npmVersion = '3.10.6'
-    download = true
-    workDir = file("${project.buildDir}/node")
-    nodeModulesDir = file("${project.projectDir}/webapp")
-}
-
-task npmStart(type: NpmTask) {
-    // install the express package only
-    args = ['start']
-}
-
-npmStart.dependsOn(npm_install)
 

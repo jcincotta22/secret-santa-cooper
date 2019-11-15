@@ -3,11 +3,13 @@ package christmas.services;
 import christmas.models.User;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class UserResource {
     private int _id;
     private String name;
-    private ArrayList<Integer> parentIds;
+    private List<Integer> parentIds;
+    private String username;
 
     public UserResource() {
 
@@ -18,6 +20,7 @@ public class UserResource {
         userResource._id = user.getId();
         userResource.name = user.getName();
         userResource.parentIds = user.getParentIds();
+        userResource.username = user.getUsername();
 
         return userResource;
     }

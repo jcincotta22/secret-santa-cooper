@@ -10,17 +10,21 @@
 
 .user-container {
   display: flex;
-  flex-wrap: wrap;
-  height: 25em;
-  width: 50%;
-  margin: auto;
-  padding: 50px;
+  margin: 20px;
+  justify-content: center;
+}
+
+.select-container {
+  width: 24em;
+  text-align: left;
+  margin: 5px;
 }
 
 .form-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  margin: 5px;
 }
 
 .form-group {
@@ -33,19 +37,22 @@
   justify-content: flex-end;
 }
 
-.form-label {
-  margin-right: 10px;
-}
-
 .button {
-  width: 100%;
-  height: 25px;
-  margin-left: 10px;
+  width: 150px;
+  height: 35px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  background-color: #4a90e2;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: Roboto;
 }
 
 .button-container {
   display: flex;
   justify-content: flex-end;
+  margin: 5px;
 }
 
 .overlay {
@@ -70,4 +77,36 @@
 .secret-santa {
   font-weight: bold;
   font-size: 25px;
+}
+
+.input-container {
+  display: flex;
+  margin: 5px;
+}
+
+.password {
+  width: 175px;
+  height: 25px;
+}
+
+.select-user-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+/* 94px button  13em react modal content */
+
+@media only screen and (max-width: 600px) {
+  .select-container {
+    width: 15em;
+  }
+
+  .form-group-button {
+    width: 94px;
+  }
+
+  div.ReactModal__Content--after-open {
+    width: 12em !important;
+  }
+  
 }

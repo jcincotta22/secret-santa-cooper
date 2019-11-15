@@ -3,9 +3,9 @@ import ReactModal from 'react-modal';
 import Button from './Button';
 import Input from './Input';
 import { login, getAllUsers } from '../http/http';
-import User from './User';
 import './styles.css';
 import SecretSanta from './SecretSanta';
+import Select from 'react-select';
 
 export default class UserLogin extends React.Component {
   constructor(props) {
@@ -19,31 +19,39 @@ export default class UserLogin extends React.Component {
       currentUserId: null,
       currentUser: null,
       allUsers: [],
+      selectedOption: null,
     }
   }
 
   componentDidMount() {
     getAllUsers().then(({ data }) => {
-      this.setState({allUsers: data})
+      this.setState({ allUsers: data })
     })
   }
 
   closeModal = () => {
-    this.setState({ isOpen: false, invalidLogin: '', currentUser: null, currentUserId: null })
+    this.setState({ isOpen: false, invalidLogin: '', currentUser: null, currentUserId: null, selectedOption: null })
   }
 
-  openModal = (id, name) => {
+  openModal = () => {
     this.setState({ 
       isOpen: true,
-      currentUserId: id, 
-      currentUser: name,
-    })
+    });
+  }
+
+  setUser = (user) => {
+    console.log(user);
+    this.setState({ 
+      currentUserId: user.value._id, 
+      currentUser: user.value.username,
+      selectedOption: user,
+    });
   }
 
   handleFormSubmit = (e) => {
     e.preventDefault();
     const userId = this.state.currentUserId;
-    login({ username: this.state.username.toLowerCase(), password: this.state.password, userId }).then(({ data }) => {
+    login({ username: this.state.currentUser, password: this.state.password, userId }).then(({ data }) => {
       this.setState({ secretSanta: data })
     })
     .catch(e => this.setState({ invalidLogin: 'Invalid login please try again' }))
@@ -65,22 +73,41 @@ export default class UserLogin extends React.Component {
     }
   }
 
-
   render() {
-    const { isOpen, username, password, secretSanta, invalidLogin, allUsers } = this.state;
+    const { isOpen, password, secretSanta, invalidLogin, allUsers, currentUserId, selectedOption } = this.state;
     const modalStyle = {
       content: {
-        width: window.innerWidth > 550 ? '35%' : '60%',
+        width: '20em',
         margin: 'auto',
         height: '20%',
         display: 'flex',
         justifyContent: 'center'
       }
     }
+    const userOptions = allUsers.map(u => ({ value: u, label: u.name }));
+
     return(
       <div className='user-container'>
-        {!secretSanta && allUsers ? allUsers.map(user => <User key={user._idx} openModal={this.openModal} userId={user._id} name={user.name} />) : null}
-        {secretSanta ? <SecretSanta text={secretSanta} userName={this.state.currentUser} />
+        <div className={'select-user-form-container'}>
+          {!secretSanta ? <div className='select-container'>
+            <Select 
+              value={selectedOption}
+              options={userOptions} 
+              onChange={(u) => this.setUser(u)} 
+            />
+          </div> : null}
+
+          {!secretSanta && currentUserId ? <div className='button-container'>
+            <Button
+              action={() => this.openModal()}
+              type={"primary"}
+              title={"REVEAL"}
+            />
+          </div> : null}
+        </div>
+        
+        
+        {secretSanta ? <SecretSanta text={secretSanta} userName={this.state.selectedOption.value.name} />
         : 
         <ReactModal
           isOpen={isOpen}
@@ -93,32 +120,26 @@ export default class UserLogin extends React.Component {
         >
           <form className="form-container" onSubmit={this.handleFormSubmit} onKeyDown={this.onKeyDown}>
             {invalidLogin ? <div className='error'>{invalidLogin}</div> : null }
-            <Input
-              inputType={"text"}
-              title={"Username"}
-              name={"username"}
-              value={username}
-              placeholder={"Enter your name"}
-              handleChange={this.handleUsername}
-            />
-            <Input
-              inputType={"password"}
-              name={"password"}
-              title={"Password"}
-              value={password}
-              placeholder={"Enter password"}
-              handleChange={this.handlePassword}
-            />
+            <div className='input-container'>
+              <Input
+                className='password'
+                inputType={"password"}
+                name={"password"}
+                value={password}
+                placeholder={"Enter password"}
+                handleChange={this.handlePassword}
+              />
+            </div>
             <div className='button-container'>
               <Button
                 action={this.closeModal}
                 type={"primary"}
-                title={"Close"}
+                title={"CLOSE"}
               />
               <Button
                 action={this.handleFormSubmit}
                 type={"primary"}
-                title={"Submit"}
+                title={"REVEAL"}
               />
             </div>
           </form>

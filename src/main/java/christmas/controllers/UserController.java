@@ -6,6 +6,7 @@ import christmas.services.UserRequestBody;
 import christmas.services.UserService;
 import christmas.utils.JsonUtil;
 import com.mongodb.DBObject;
+import org.bson.Document;
 import spark.Request;
 import spark.Response;
 import spark.Route;
@@ -33,7 +34,7 @@ public class UserController {
                 String b64Credentials = auth.substring("Basic".length()).trim();
                 String credentials = new String(Base64.getDecoder().decode(b64Credentials));
                 try {
-                    DBObject user = userService.getUserWithPassword(
+                    Document user = userService.getUserWithPassword(
                             Integer.parseInt(request.params(":id")),
                             credentials
                     );
