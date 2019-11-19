@@ -195,7 +195,9 @@ public class UserService {
 
             List<User> userList = new ArrayList<>();
 
-            DBCursor dbCursor = userCollection.find();
+            BasicDBObject basicDBObject = new BasicDBObject();
+            basicDBObject.put("name", 1);
+            DBCursor dbCursor = userCollection.find().sort(basicDBObject);
             while (dbCursor.hasNext()) {
                 User user = JsonUtil.jsonToObject(JsonUtil.toJson(dbCursor.next()), User.class);
                 userList.add(user);

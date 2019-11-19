@@ -2,19 +2,31 @@ package christmas;
 
 import christmas.controllers.UserController;
 import christmas.errros.ResponseError;
+import christmas.mongo.ConnectToDB;
 import christmas.services.UserService;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.model.IndexOptions;
+import com.mongodb.client.model.Indexes;
 import org.apache.log4j.Logger;
 import org.apache.log4j.LogManager;
+import org.bson.Document;
 
 import java.net.UnknownHostException;
+import java.util.UUID;
 
 import static christmas.utils.JsonUtil.toJson;
 import static spark.Spark.*;
 
 public class Bootstrap {
-    final private static Logger logger = LogManager.getLogger(Bootstrap.class.getName());
+    private static final Logger logger = LogManager.getLogger(Bootstrap.class.getName());
 
     public static void main(String[] args) throws UnknownHostException {
+        UUID uuid = UUID.randomUUID();
+        MongoCollection<Document> userCollection = ConnectToDB.getCollection("Users", uuid);
+        IndexOptions options = new IndexOptions();
+        options.background(true);
+        userCollection.createIndex(Indexes.ascending("name"), options);
+
         port(8080);
 
         options("/*",
@@ -39,7 +51,7 @@ public class Bootstrap {
 
         before((request, response) -> response.header("Access-Control-Allow-Origin", "*"));
 
-        new UserController(new UserService());
+        UserController.initUserEndpoints(new UserService());
 
         after((req, res) -> {
             res.type("application/json");

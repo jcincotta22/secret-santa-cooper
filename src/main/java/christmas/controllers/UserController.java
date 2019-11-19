@@ -5,7 +5,6 @@ import christmas.models.User;
 import christmas.services.UserRequestBody;
 import christmas.services.UserService;
 import christmas.utils.JsonUtil;
-import com.mongodb.DBObject;
 import org.bson.Document;
 import spark.Request;
 import spark.Response;
@@ -21,10 +20,20 @@ import static christmas.utils.JsonUtil.json;
 import static spark.Spark.*;
 
 public class UserController {
-    final private static Logger logger = LogManager.getLogger(UserController.class.getName());
+    private static final Logger logger = LogManager.getLogger(UserController.class.getName());
+    private final UserService userService;
 
-    public UserController(final UserService userService) {
+    private UserController(final UserService userService) {
+        this.userService = userService;
+    }
 
+    public static void initUserEndpoints(final UserService userService) {
+        UserController userController = new UserController(userService);
+        userController.initEndpoints();
+        logger.info("User endpoints successfully initialized");
+    }
+
+    private void initEndpoints() {
         get("api/users/:id", new Route() {
             @Override
             public Object handle(Request request, Response response) throws ResponseError, UnknownHostException {

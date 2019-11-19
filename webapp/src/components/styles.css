@@ -46,7 +46,9 @@
   background-color: #4a90e2;
   color: #ffffff;
   font-size: 14px;
-  font-family: Roboto;
+  font-family: sans-serif;
+  cursor: pointer;
+  font-weight: 500;
 }
 
 .button-container {
@@ -71,7 +73,16 @@
 }
 
 .error {
-  color: red;
+  color: #ff585d;
+  position: absolute;
+  bottom: 10px;
+  font-size: 12px;
+}
+
+.password-label {
+  position: absolute;
+  top: 10px;
+  font-size: 12px;
 }
 
 .secret-santa {
@@ -94,7 +105,6 @@
   flex-direction: column;
   justify-content: flex-start;
 }
-/* 94px button  13em react modal content */
 
 @media only screen and (max-width: 600px) {
   .select-container {

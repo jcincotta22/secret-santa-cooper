@@ -40,7 +40,6 @@ export default class UserLogin extends React.Component {
   }
 
   setUser = (user) => {
-    console.log(user);
     this.setState({ 
       currentUserId: user.value._id, 
       currentUser: user.value.username,
@@ -62,7 +61,7 @@ export default class UserLogin extends React.Component {
   }
 
   handlePassword = (e) => {
-    this.setState({ password: e.target.value })
+    this.setState({ password: e.target.value, invalidLogin: '' })
   }
 
   onKeyDown = (e) => {
@@ -92,6 +91,7 @@ export default class UserLogin extends React.Component {
           {!secretSanta ? <div className='select-container'>
             <Select 
               value={selectedOption}
+              placeholder={'Select your name...'}
               options={userOptions} 
               onChange={(u) => this.setUser(u)} 
             />
@@ -119,14 +119,15 @@ export default class UserLogin extends React.Component {
           overlayClassName={'overlay'}
         >
           <form className="form-container" onSubmit={this.handleFormSubmit} onKeyDown={this.onKeyDown}>
-            {invalidLogin ? <div className='error'>{invalidLogin}</div> : null }
             <div className='input-container'>
+              {invalidLogin ? <div className='error'>{invalidLogin}</div> : null }
+              <div className='password-label'>Enter your password</div> 
               <Input
                 className='password'
                 inputType={"password"}
                 name={"password"}
                 value={password}
-                placeholder={"Enter password"}
+                placeholder={"Enter your password"}
                 handleChange={this.handlePassword}
               />
             </div>
