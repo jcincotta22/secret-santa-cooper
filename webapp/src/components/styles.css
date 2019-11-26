@@ -74,15 +74,15 @@
 
 .error {
   color: #ff585d;
-  position: absolute;
-  bottom: 10px;
   font-size: 12px;
+  margin: 5px;
+  z-index: 100;
+  position: absolute;
 }
 
 .password-label {
-  position: absolute;
-  top: 10px;
   font-size: 12px;
+  margin: 5px;
 }
 
 .secret-santa {
@@ -93,6 +93,8 @@
 .input-container {
   display: flex;
   margin: 5px;
+  margin-bottom: 15px;
+  position: relative;
 }
 
 .password {

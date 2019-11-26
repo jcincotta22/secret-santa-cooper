@@ -80,7 +80,8 @@ export default class UserLogin extends React.Component {
         margin: 'auto',
         height: '20%',
         display: 'flex',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        minHeight: '125px',
       }
     }
     const userOptions = allUsers.map(u => ({ value: u, label: u.name }));
@@ -119,30 +120,33 @@ export default class UserLogin extends React.Component {
           overlayClassName={'overlay'}
         >
           <form className="form-container" onSubmit={this.handleFormSubmit} onKeyDown={this.onKeyDown}>
-            <div className='input-container'>
-              {invalidLogin ? <div className='error'>{invalidLogin}</div> : null }
+            <div className='input-button-container'>
               <div className='password-label'>Enter your password</div> 
-              <Input
-                className='password'
-                inputType={"password"}
-                name={"password"}
-                value={password}
-                placeholder={"Enter your password"}
-                handleChange={this.handlePassword}
-              />
+              <div className='input-container'>
+                <Input
+                  className='password'
+                  inputType={"password"}
+                  name={"password"}
+                  value={password}
+                  placeholder={"Enter your password"}
+                  handleChange={this.handlePassword}
+                />
+              </div>
+              <div className='button-container'>
+                <Button
+                  action={this.closeModal}
+                  type={"primary"}
+                  title={"CLOSE"}
+                />
+                <Button
+                  action={this.handleFormSubmit}
+                  type={"primary"}
+                  title={"REVEAL"}
+                />
+              </div>
+              {invalidLogin ? <div className='error'>{invalidLogin}</div> : null }
             </div>
-            <div className='button-container'>
-              <Button
-                action={this.closeModal}
-                type={"primary"}
-                title={"CLOSE"}
-              />
-              <Button
-                action={this.handleFormSubmit}
-                type={"primary"}
-                title={"REVEAL"}
-              />
-            </div>
+            
           </form>
         </ReactModal>}
       </div>
